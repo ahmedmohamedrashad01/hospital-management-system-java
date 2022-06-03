@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.LoginController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0">
+         <children>
+            <ImageView fx:id="myBackground" fitHeight="751.0" fitWidth="1385.0" layoutY="-2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@background.jpeg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="421.0" layoutY="170.0" prefHeight="446.0" prefWidth="587.0" style="-fx-background-color: #cbdde4; -fx-background-radius: 50px;">
+               <children>
+                  <FontAwesomeIcon iconName="USER" layoutX="116.0" layoutY="127.0" selectionFill="#0a25d3" size="4em" text="" />
+                  <FontAwesomeIcon iconName="KEY" layoutX="116.0" layoutY="252.0" selectionFill="#0a25d3" size="4em" />
+                  <JFXTextField fx:id="txtID" alignment="CENTER" labelFloat="true" layoutX="241.0" layoutY="86.0" prefHeight="31.0" prefWidth="189.0" promptText="Enter Your ID" style="-fx-text-fill: #fff;">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPass" alignment="CENTER" labelFloat="true" layoutX="246.0" layoutY="212.0" prefHeight="31.0" prefWidth="189.0" promptText="Enter Your Password" style="-fx-text-fill: #fff;">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <FontAwesomeIcon iconName="USERS" layoutX="33.0" layoutY="415.0" selectionFill="#0a25d3" size="2.5em" visible="false" />
+                  <JFXButton fx:id="btnLogin" alignment="CENTER" layoutX="217.0" layoutY="331.0" onAction="#btnLoginAction" prefHeight="31.0" prefWidth="189.0" style="-fx-background-color: #717896; -fx-background-radius: 50px;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#dd8a03" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCreateUser" alignment="CENTER" buttonType="RAISED" layoutX="135.0" layoutY="389.0" onAction="#btnCreateUserAction" prefHeight="31.0" prefWidth="176.0" ripplerFill="WHITE" style="-fx-background-color: #6B3D5B; -fx-background-radius: 50px;" text="create new account" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <Lighting diffuseConstant="1.42" specularConstant="0.0" specularExponent="17.67" surfaceScale="10.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Pane>
+            <JFXButton fx:id="btnExport" alignment="CENTER" layoutX="114.0" layoutY="358.0" onAction="#btnExportAction" prefHeight="31.0" prefWidth="189.0" style="-fx-background-color: #717896; -fx-background-radius: 50px;" text="Export File" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

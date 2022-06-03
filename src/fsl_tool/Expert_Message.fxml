@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.Expert_MessageController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0">
+         <children>
+            <ImageView fitHeight="751.0" fitWidth="1385.0" layoutX="-9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@background.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="460.0" layoutY="26.0" prefHeight="59.0" prefWidth="448.0" text="Expert Messages" textFill="#5e0808">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="145.0" fitWidth="159.0" layoutX="-2.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGO.gif" />
+               </image>
+            </ImageView>
+            <JFXTextArea fx:id="txtArchive" disable="true" layoutX="707.0" layoutY="188.0" prefHeight="370.0" prefWidth="543.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextArea>
+            <Pane layoutX="122.0" layoutY="138.0" opacity="0.71" prefHeight="526.0" prefWidth="1171.0" style="-fx-background-color: #cbdde4; -fx-border-color: #000;">
+               <effect>
+                  <InnerShadow choke="0.82" height="23.85" radius="17.322499999999998" width="47.44" />
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="722.0" layoutY="12.0" prefHeight="50.0" prefWidth="289.0" style="-fx-background-color: #CEDBF1;" text="Write a new Message" textFill="#541c53de">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnSend" alignment="CENTER" layoutX="993.0" layoutY="410.0" onAction="#btnSendAction" prefHeight="59.0" prefWidth="141.0" style="-fx-background-color: #B4DFE6;" text="Send" textFill="#bc1717">
+                     <font>
+                        <Font name="Algerian" size="24.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#dd8a03" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="610.0" layoutY="410.0" prefHeight="59.0" prefWidth="356.0" promptText="enter receiver name" style="-fx-background-color: #fff; -fx-border-color: #000;">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="txtOldMessage" editable="false" layoutX="20.0" layoutY="281.0" prefHeight="144.0" prefWidth="513.0" style="-fx-border-color: #000;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextArea>
+                  <JFXButton fx:id="btnMessageReceived" alignment="CENTER" layoutX="123.0" layoutY="440.0" onAction="#btnMessageReceivedAction" prefHeight="59.0" prefWidth="308.0" style="-fx-background-color: #fff; -fx-background-radius: 50px;" text="Message has been read" textFill="#13016f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#dd8a03" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXTextArea fx:id="textReceiveNewMessage" editable="false" layoutX="20.0" layoutY="79.0" prefHeight="144.0" prefWidth="513.0" promptText="There Is No New Message" style="-fx-border-color: #000;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXTextArea>
+                  <Label alignment="CENTER" layoutX="162.0" layoutY="231.0" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: #CEDBF1;" text="Old Messages" textFill="#541c53de">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="162.0" layoutY="12.0" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: #CEDBF1;" text="Inbox Messages" textFill="#541c53de">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtNewMeassge" layoutX="610.0" layoutY="81.0" prefHeight="301.0" prefWidth="513.0" promptText="enter your message">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1262.0" layoutY="109.0" onMouseClicked="#iLogOuClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" />
+            <FontAwesomeIcon fx:id="iHome" fill="#070707" iconName="HOME" layoutX="1177.0" layoutY="109.0" onMouseClicked="#iHomeClick" onMouseEntered="#iHomeAction" onMouseExited="#iHomeExitAction" size="4em" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

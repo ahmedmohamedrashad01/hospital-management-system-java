@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.Doctor_Statistical_SheetsController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0">
+         <children>
+            <ImageView fitHeight="756.0" fitWidth="1396.0" pickOnBounds="true">
+               <image>
+                  <Image url="@background.jpeg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="242.0" layoutY="159.0" opacity="0.71" prefHeight="481.0" prefWidth="1019.0" style="-fx-background-color: #cbdde4; -fx-border-color: #000;">
+               <effect>
+                  <InnerShadow choke="0.77" height="59.55" radius="20.3175" width="23.72" />
+               </effect>
+               <children>
+                  <PieChart fx:id="myPieChart" layoutX="510.0" layoutY="34.0" prefHeight="371.0" prefWidth="491.0" title="Level of sick leaves" />
+                  <BarChart fx:id="myBarChart" layoutX="31.0" layoutY="34.0" prefHeight="414.0" prefWidth="456.0" title="Number of sick leaves ber month">
+                    <xAxis>
+                      <CategoryAxis label="Month" side="BOTTOM">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="10.0" />
+                           </tickLabelFont></CategoryAxis>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Number of sick leavs" side="LEFT">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="12.0" />
+                           </tickLabelFont></NumberAxis>
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <ImageView fitHeight="192.0" fitWidth="205.0" layoutX="64.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGO.gif" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="480.0" layoutY="35.0" prefHeight="59.0" prefWidth="448.0" text="Statistical Sheet" textFill="#5e0808">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1270.0" layoutY="135.0" onMouseClicked="#iLogOuClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" />
+            <FontAwesomeIcon fx:id="iHome" fill="#070707" iconName="HOME" layoutX="1185.0" layoutY="135.0" onMouseClicked="#iHomeClick" onMouseEntered="#iHomeAction" onMouseExited="#iHomeExitAction" size="4em" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

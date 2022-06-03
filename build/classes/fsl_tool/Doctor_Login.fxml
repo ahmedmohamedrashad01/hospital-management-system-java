@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.Doctor_LoginController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0">
+         <children>
+            <ImageView fitHeight="751.0" fitWidth="1385.0" pickOnBounds="true">
+               <image>
+                  <Image url="@background.jpeg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnViewProfile" alignment="CENTER" layoutX="240.0" layoutY="264.0" onAction="#btnViewProfileAction" prefHeight="90.0" prefWidth="426.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="View Profile" textFill="#13016f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnCreateSickLeave" alignment="CENTER" layoutX="719.0" layoutY="431.0" onAction="#btnCreateSickLeaveAction" prefHeight="90.0" prefWidth="426.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Create new Sick Leave" textFill="#13016f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="btnViewStatisticalSheet" alignment="CENTER" layoutX="240.0" layoutY="431.0" onAction="#btnViewStatisticalSheetAction" prefHeight="90.0" prefWidth="426.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="View Statistical Sheet" textFill="#13016f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="btnVieMessage" alignment="CENTER" layoutX="719.0" layoutY="264.0" onAction="#btnVieMessageAction" prefHeight="90.0" prefWidth="426.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="View Inbox" textFill="#13016f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnBack" alignment="CENTER" layoutX="171.0" layoutY="582.0" onAction="#btnBackAction" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Log out" textFill="#13016f" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" alignment="CENTER" layoutX="1026.0" layoutY="582.0" onAction="#btnExitAction" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Exit" textFill="#b91f00" visible="false">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fitHeight="192.0" fitWidth="205.0" layoutX="54.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGO.gif" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="469.0" layoutY="32.0" prefHeight="59.0" prefWidth="448.0" text="Doctor's Options" textFill="#5e0808">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#070707" iconName="USERS" layoutX="282.0" layoutY="322.0" size="3em" />
+            <FontAwesomeIcon fill="#070707" iconName="BAR_CHART_O" layoutX="282.0" layoutY="489.0" size="3em" />
+            <FontAwesomeIcon fill="#070707" iconName="FILE_TEXT" layoutX="758.0" layoutY="488.0" size="3em" />
+            <FontAwesomeIcon fx:id="messageIcon" fill="#070707" iconName="ENVELOPE" layoutX="758.0" layoutY="322.0" size="3em" />
+            <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1264.0" layoutY="141.0" onMouseClicked="#iLogOuClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" />
+            <FontAwesomeIcon fx:id="iHome" fill="#070707" iconName="HOME" layoutX="1179.0" layoutY="141.0" onMouseClicked="#iHomeClick" onMouseEntered="#iHomeAction" onMouseExited="#iHomeExitAction" size="4em" />
+            <Label fx:id="lblMessageCount" alignment="CENTER" layoutX="758.0" layoutY="264.0" prefHeight="29.0" prefWidth="36.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

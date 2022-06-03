@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.CreateNewUserController">
+   <children>
+      <ImageView fitHeight="751.0" fitWidth="1385.0" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="761.0" fitWidth="1385.0" layoutX="3.0" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpeg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtEmpCode" alignment="CENTER" layoutX="642.0" layoutY="208.0" prefHeight="40.0" prefWidth="203.0" promptText="Employee Code" style="-fx-font-weight: bold; -fx-text-fill: #000; -fx-font-size: 15px; -fx-border-color: #000;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="642.0" layoutY="321.0" prefHeight="40.0" prefWidth="203.0" promptText="Name" style="-fx-font-weight: bold; -fx-text-fill: #000; -fx-font-size: 15px; -fx-border-color: #000;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIcon fill="#05306b" iconName="CREDIT_CARD" layoutX="561.0" layoutY="240.0" size="3em" />
+      <FontAwesomeIcon fill="#05306b" iconName="USER" layoutX="566.0" layoutY="354.0" size="3em" text="" />
+      <FontAwesomeIcon fill="#05306b" iconName="HOME" layoutX="566.0" layoutY="471.0" size="3em" />
+      <Label alignment="CENTER" layoutX="472.0" layoutY="37.0" prefHeight="59.0" prefWidth="448.0" text="Create User Account" textFill="#5e0808" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSave" alignment="CENTER" layoutX="602.0" layoutY="560.0" onAction="#btnSaveAction" prefHeight="71.0" prefWidth="283.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Save" textFill="#13016f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd8a03" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <ImageView fitHeight="192.0" fitWidth="205.0" layoutX="74.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="67.0">
+         <image>
+            <Image url="@LOGO.gif" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtAuto" alignment="CENTER" layoutX="642.0" layoutY="438.0" prefHeight="40.0" prefWidth="203.0" promptText="Department" style="-fx-font-weight: bold; -fx-text-fill: #000; -fx-font-size: 15px; -fx-border-color: #000;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1280.0" layoutY="145.0" onMouseClicked="#iLogOuClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" />
+      <FontAwesomeIcon fx:id="iHome" fill="#070707" iconName="HOME" layoutX="1195.0" layoutY="145.0" onMouseClicked="#iHomeClick" onMouseEntered="#iHomeAction" onMouseExited="#iHomeExitAction" size="4em" />
+   </children>
+</AnchorPane>

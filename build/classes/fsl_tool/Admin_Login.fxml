@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.Admin_LoginController">
+   <children>
+      <ImageView fitHeight="751.0" fitWidth="1385.0" pickOnBounds="true">
+         <image>
+            <Image url="@background.jpeg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnCrateUser" alignment="CENTER" layoutX="229.0" layoutY="579.0" onAction="#btnCrateUserAction" prefHeight="71.0" prefWidth="283.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Create new user" textFill="#13016f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd8a03" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" alignment="CENTER" layoutX="181.0" layoutY="592.0" onAction="#btnBackAction" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Log out" textFill="#13016f" visible="false">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd8a03" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <ImageView fitHeight="192.0" fitWidth="205.0" layoutX="64.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGO.gif" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="479.0" layoutY="42.0" prefHeight="59.0" prefWidth="448.0" text="Administrator " textFill="#5e0808">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#070707" iconName="PLUS" layoutX="240.0" layoutY="634.0" size="3em" AnchorPane.topAnchor="600.0" />
+      <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1274.0" layoutY="151.0" onMouseClicked="#iLogOutClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" />
+      <TableView fx:id="myTable" layoutX="356.0" layoutY="208.0" prefHeight="347.0" prefWidth="685.0" style="-fx-background-color: #ffffff22; -fx-border-color: #05306b;">
+         <columns>
+            <TableColumn fx:id="colID" editable="false" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colCode" editable="false" prefWidth="144.0" text="Employee Code" />
+            <TableColumn fx:id="colName" editable="false" prefWidth="262.0" text="Name" />
+            <TableColumn fx:id="colDPT" editable="false" prefWidth="200.0" text="Department" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" alignment="CENTER" layoutX="625.0" layoutY="150.0" prefHeight="40.0" prefWidth="203.0" promptText="Enter Employee Code" style="-fx-font-weight: bold; -fx-text-fill: #000; -fx-font-size: 15px; -fx-border-color: #000;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIcon fx:id="IconSearch" fill="#05306b" iconName="SEARCH" layoutX="569.0" layoutY="183.0" onMouseClicked="#IconSearchAction" onMouseEntered="#IconSearchEntered" onMouseExited="#IconSearchExit" size="3em" />
+      <JFXButton fx:id="btnEdit" alignment="CENTER" layoutX="557.0" layoutY="577.0" onAction="#btnEditAction" prefHeight="71.0" prefWidth="283.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Edit" textFill="#13016f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd8a03" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <FontAwesomeIcon fill="#070707" iconName="EDIT" layoutX="584.0" layoutY="625.0" size="3em" AnchorPane.topAnchor="594.1428565979004" />
+      <JFXButton fx:id="btnDelete" alignment="CENTER" layoutX="900.0" layoutY="577.0" onAction="#btnDeleteAction" prefHeight="71.0" prefWidth="283.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Delete" textFill="#13016f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd8a03" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+      <FontAwesomeIcon fill="#070707" iconName="ERASER" layoutX="927.0" layoutY="625.0" size="3em" />
+   </children>
+</AnchorPane>

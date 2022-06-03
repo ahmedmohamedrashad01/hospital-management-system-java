@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fsl_tool.Evaluate_RecordController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0">
+         <children>
+            <ImageView fitHeight="751.0" fitWidth="1385.0" layoutX="2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@background.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="143.0" fitWidth="164.0" layoutX="56.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LOGO.gif" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="471.0" layoutY="47.0" prefHeight="59.0" prefWidth="448.0" text="Evaluate Record" textFill="#5e0808" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fx:id="iLogout" fill="#070707" iconName="POWER_OFF" layoutX="1264.0" layoutY="132.0" onMouseClicked="#iLogOuClick" onMouseEntered="#iLogoutAction" onMouseExited="#iLogoutExitAction" size="4em" AnchorPane.topAnchor="90.85714340209961" />
+            <FontAwesomeIcon fx:id="iHome" fill="#070707" iconName="HOME" layoutX="1172.0" layoutY="132.0" onMouseClicked="#iHomeClick" onMouseEntered="#iHomeAction" onMouseExited="#iHomeExitAction" size="4em" AnchorPane.topAnchor="90.85714340209961" />
+            <JFXTextField fx:id="txtMrn" alignment="CENTER" labelFloat="true" layoutX="379.0" layoutY="167.0" onKeyReleased="#keyRel" prefHeight="34.0" prefWidth="170.0" promptText="Enter MRN">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tableView" layoutX="300.0" layoutY="220.0" prefHeight="358.0" prefWidth="791.0" style="-fx-border-color: #000;">
+              <columns>
+                <TableColumn fx:id="colId" editable="false" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="colMrn" editable="false" prefWidth="98.0" text="MRN" />
+                <TableColumn fx:id="colProblem" editable="false" prefWidth="235.0" text="Problem" />
+                  <TableColumn fx:id="colNumOfDays" editable="false" prefWidth="124.0" text="Num Of Days" />
+                  <TableColumn fx:id="colValue" editable="false" prefWidth="129.0" text="Value" />
+                  <TableColumn fx:id="colLevel" editable="false" prefWidth="126.0" text="Level" />
+              </columns>
+            </TableView>
+            <JFXComboBox fx:id="cbx" focusColor="#ffffff00" layoutX="822.0" layoutY="163.0" prefHeight="41.0" prefWidth="194.0" promptText="Select Level" style="-fx-font-size: 15px; -fx-background-radius: 50px; -fx-text-alignment: center; -fx-font-weight: bold; -fx-background-color: #B7D8E1;" unFocusColor="#ffffff00">
+               <padding>
+                  <Insets left="57.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXButton fx:id="btnUpdate" alignment="CENTER" layoutX="520.0" layoutY="599.0" onAction="#btnUpdateAction" prefHeight="69.0" prefWidth="348.0" style="-fx-background-color: #B4DFE6; -fx-background-radius: 50px;" text="Update Sick Leave Level" textFill="#13016f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#dd8a03" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
